@@ -44,4 +44,4 @@ jobs:
       parameters:
         workingDirectory: '$(System.DefaultWorkingDirectory)/storage-deployment'
         varFile: 'sub-lzlab-dev-uks-01.tfvars'
-        stateKey: 'storage.tfstate'  
+        stateKey: 'vpn.tfstate'  
