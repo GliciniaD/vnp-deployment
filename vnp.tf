@@ -6,9 +6,9 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_storage_account" "vnetpeering" {
   for_each                 = var.vnet_peering
-  name                     = each.value.storage_name
+  name              = var.peering_name
   resource_group_name      = azurerm_resource_group.rg[each.key].name
   location                 = azurerm_resource_group.rg[each.key].location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+  virtual_network_name      = var.vnet_name
+   remote_virtual_network_id =var.remote_vnet_id 
 }
