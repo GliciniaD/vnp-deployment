@@ -37,8 +37,8 @@ jobs:
 
     - script: |
         cp $(System.DefaultWorkingDirectory)/central-variables/Landing-Zone-Files/sub-lzlab-dev-uks-01.tfvars \
-           $(System.DefaultWorkingDirectory)/storage-deployment/
-      displayName: Copy tfvars to storage module
+           $(System.DefaultWorkingDirectory)/vnp-deployment/
+      displayName: Copy tfvars to VnetPeering repository
 
     - template: terraform-tasks.yaml@Azure-devops-tasks
       parameters:
